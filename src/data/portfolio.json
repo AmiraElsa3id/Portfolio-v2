@@ -1,0 +1,162 @@
+{
+  "name": "Amera Mohammed",
+  "title": "Software Engineer",
+  "titles": ["Software Engineer", "Frontend Engineer", "Backend Engineer"],
+  "cv": "/Amera_Mohammed_Software_Engineer.pdf",
+  "contact": {
+    "phone": "+20 102 168 5965",
+    "email": "ameraelsa3id@gmail.com",
+    "location": "Mansoura, Egypt",
+    "relocation": "Open to Relocation / Remote",
+    "linkedin": "https://www.linkedin.com/in/amera-mohammed/",
+    "github": "https://github.com/AmiraElsa3id"
+  },
+  "summary": "Frontend Engineer with a BSc in Computer Science and hands-on expertise building fast, accessible, and scalable user interfaces. Proficient in React, Next.js, TypeScript, Tailwind CSS, and modern JavaScript (ES6+), with strong experience in responsive design, component architecture, performance optimisation, and Web Vitals improvement. Mentored 20+ developers on advanced React patterns and delivered 30+ workshops on modern frontend practices. Experienced with REST API integration, Git workflows, Agile environments, and AI-assisted development tools.",
+  "skills": {
+    "Languages": ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "PHP", "Python", "SQL"],
+    "Frameworks & Libraries": ["React", "Next.js", "Vue.js", "jQuery", "Django", "Laravel", "Inertia.js"],
+    "Styling": ["Tailwind CSS", "Bootstrap", "SASS/SCSS", "CSS Animations", "Responsive Design"],
+    "State Management": ["React Context API", "React Hooks", "Redux"],
+    "APIs & Auth": ["RESTful APIs", "JWT Authentication", "Stripe Payment", "RBAC", "Spatie Laravel Permission"],
+    "Backend": ["Laravel 11", "Django", "Custom PHP MVC", "Postman", "API Design"],
+    "Databases": ["MySQL", "MongoDB", "Eloquent ORM", "PDO", "Query Optimisation"],
+    "Performance": ["Core Web Vitals", "Lighthouse Auditing", "Code Splitting", "Lazy Loading", "Image Optimisation"],
+    "Accessibility": ["WCAG Guidelines", "Semantic HTML", "ARIA Attributes"],
+    "DevOps & Tools": ["Git", "GitHub", "Linux", "Apache", "Nginx", "CI/CD Basics", "Figma", "Agile/Scrum"],
+    "Soft Skills": ["Problem Solving", "Critical Thinking", "Mentorship", "Technical Communication", "Attention to Detail", "Collaboration", "Adaptability"]
+  },
+  "experience": [
+    {
+      "role": "Frontend Engineer Mentor — React / Next.js",
+      "company": "Route Academy",
+      "period": "Sep 2024 — Present",
+      "highlights": [
+        "Mentored 20+ junior developers weekly on React, Next.js, TypeScript, and modern JavaScript patterns, maintaining an assignment-completion rate above 90%.",
+        "Delivered 30+ live technical workshops covering React Hooks, Server Components, state management, performance optimisation, and component architecture best practices.",
+        "Conducted structured code reviews, identifying and eliminating recurring anti-patterns and reducing repeated errors by approximately 40% across two semesters.",
+        "Introduced accessibility (WCAG) standards, responsive design, and reusable component patterns into the curriculum."
+      ]
+    },
+    {
+      "role": "Frontend Developer (WordPress)",
+      "company": "Ave Events",
+      "period": "Sep 2024 — Sep 2025, Full-Time",
+      "highlights": [
+        "Built and maintained 5+ responsive, cross-browser-compatible websites with 99%+ uptime reliability.",
+        "Reduced average page load time by 25% through caching strategies, image optimisation, and Lighthouse performance auditing.",
+        "Implemented custom theme enhancements and UX improvements that increased average session duration by 18%.",
+        "Diagnosed and resolved 15+ critical UI/UX bugs; applied timely updates to maintain cross-browser and cross-device compatibility."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Clinic Appointment System",
+      "tech": "Python, Django 6, DRF, MySQL, Bootstrap 5, Chart.js",
+      "description": "Architected a multi-role platform with RBAC for 4 roles, automated slot generation, patient self-booking, appointment state machine, queue management, and EMR with prescriptions & lab tests. Built admin analytics dashboard with Chart.js (revenue, no-show rates, peak hours), CSV report exports, RESTful API for appointment CRUD, and in-app notifications for all events.",
+      "links": {
+        "code": null,
+        "demo": null
+      },
+      "image": null
+    },
+    {
+      "name": "Hotel Management System",
+      "tech": "Laravel 11, Vue 3, Inertia.js, MySQL, Stripe, Spatie RBAC",
+      "description": "Architected a full-scale hotel management platform with RBAC for Admins, Managers, Receptionists, and Clients using Spatie Laravel Permission with two isolated authentication guards. Engineered complex reservation workflows, room and floor allocation logic, and Stripe payment processing with webhook handling.",
+      "links": {
+        "code": null,
+        "demo": null
+      },
+      "image": null
+    },
+    {
+      "name": "Cafeteria Management System",
+      "tech": "PHP 8.2, Custom MVC, MySQL (PDO), Bootstrap 5, Apache",
+      "description": "Built a production-grade platform from scratch using a custom PHP MVC framework with Composer autoloading, PDO database abstraction, and environment-based configuration — no external framework. Developed the full Admin Orders module with order lifecycle management, database transaction handling, and secure input validation deployed on Apache.",
+      "links": {
+        "code": "https://github.com/AhmedMohO/cafeteria-project",
+        "demo": null
+      },
+      "image": null
+    },
+    {
+      "name": "BlogHub — Full-Stack Blog Platform",
+      "tech": "Laravel, Vue.js, RESTful API, MySQL",
+      "description": "Built a RESTful API backend with JWT auth, CRUD, and nested comments on a normalised schema; consumed by a Vue.js SPA with Vue Router. Applied Eloquent ORM relationships, API resource controllers, and structured JSON responses.",
+      "links": {
+        "code": "https://github.com/AmiraElsa3id/ITI-Blog",
+        "demo": null
+      },
+      "image": null
+    },
+    {
+      "name": "Linked Posts — Social Media Application",
+      "tech": "React, REST API, JWT Auth",
+      "description": "Built a responsive social networking application featuring user profiles, post feeds, likes, comments, and a follow/unfollow system. Implemented JWT-based authentication, protected routing, and real-time UI updates within a modular React component architecture.",
+      "links": {
+        "code": "https://github.com/amera-elsa3id-dev/social-app-v2",
+        "demo": "https://social-app-v2-eight.vercel.app"
+      },
+      "image": "/assets/images/linked-posts.png"
+    },
+    {
+      "name": "Fresh Cart — E-Commerce SPA",
+      "tech": "React, Tailwind CSS, Stripe, REST API",
+      "description": "Developed a production-ready e-commerce SPA with product browsing, category filtering, cart management, wishlist, and Stripe payment integration. Optimised component re-renders and applied lazy loading for improved Core Web Vitals scores.",
+      "links": {
+        "code": "https://github.com/AmiraElsa3id/Fresh-Cart",
+        "demo": "https://fresh-cart-ecommerce-site.vercel.app"
+      },
+      "image": "/assets/images/fresh-cart.png"
+    },
+    {
+      "name": "D-Pathy — AI-Powered Diabetic Retinopathy Detection",
+      "tech": "Python, TensorFlow, Flutter",
+      "description": "Graduation project — AI-powered mobile application for diabetic retinopathy detection. Awarded Excellent grade.",
+      "links": {
+        "code": "https://github.com/nadareda12001/D-pthy",
+        "demo": "https://youtu.be/3Zspp3XEy4o"
+      },
+      "image": null
+    }
+  ],
+  "education": [
+    {
+      "degree": "ITI Diploma — Open Source Track (9 Months)",
+      "school": "Information Technology Institute (ITI), Mansoura",
+      "period": "2025 — Present",
+      "details": ["Covered HTML/CSS/JavaScript, UI frameworks, Linux, DevOps fundamentals, and Agile methodologies."]
+    },
+    {
+      "degree": "Master of Science in Computer Science",
+      "school": "Mansoura University",
+      "period": "2024 — Present",
+      "details": []
+    },
+    {
+      "degree": "Frontend Development Diploma",
+      "school": "Route Academy",
+      "period": "2023 — 2024",
+      "details": ["Intensive programme covering React, Next.js, TypeScript, Tailwind CSS, and modern JavaScript (ES6+) patterns."]
+    },
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "Mansoura University",
+      "period": "Sep 2019 — May 2023",
+      "details": [
+        "Cumulative GPA: 3.61/4.0 (Very Good) — Top 15% of graduating class.",
+        "Graduation Project: D-Pathy — AI-powered diabetic retinopathy detection app (Python, TensorFlow); awarded Excellent grade."
+      ]
+    }
+  ],
+  "honors": [
+    "Silver Medal — Huawei ICT Competition 2022 (national-level technical competition).",
+    "CIS College Team Member — Led frontend development and motion graphics for Hack Your Future 3 & 4."
+  ],
+  "languages": {
+    "Arabic": "Native",
+    "English": "Conversational (Reading, Writing, Listening & Speaking)",
+    "Italian": "Basic"
+  }
+}
