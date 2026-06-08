@@ -32,12 +32,9 @@ function Contact() {
 
   return (
     <section id="contact" ref={ref} className="relative min-h-screen flex items-center px-6 py-24 bg-white dark:bg-slate-950">
-      <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.03]" style={{
-        backgroundImage: 'radial-gradient(circle at 50% 50%, #8b5cf6 0%, transparent 50%)',
-      }} />
       <div className="relative w-full max-w-lg mx-auto">
         <div className={`text-center mb-12 ${inView ? 'anim-fade-up in' : 'anim-fade-up'}`}>
-          <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400 uppercase">Contact</span>
+          <span className="text-xs font-semibold tracking-widest accent-text uppercase">Contact</span>
           <h2 className={`text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mt-2 section-title ${inView ? 'in' : ''}`}>Get in Touch</h2>
           <p className="text-slate-500 dark:text-slate-400 mt-5">Have a question or want to work together?</p>
         </div>

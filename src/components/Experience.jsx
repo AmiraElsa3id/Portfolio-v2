@@ -26,7 +26,7 @@ function Experience() {
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
                   <div>
                     <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{job.role}</h3>
-                    <p className="text-sm text-violet-600 dark:text-violet-400 font-medium">{job.company}</p>
+                    <p className="text-sm accent-text font-medium">{job.company}</p>
                   </div>
                   <span className="text-xs text-slate-400 dark:text-slate-500 whitespace-nowrap px-2.5 py-1 rounded-full bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700">{job.period}</span>
                 </div>

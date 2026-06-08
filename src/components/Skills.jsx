@@ -2,6 +2,7 @@ import { memo } from 'react'
 import { useInView } from '../hooks/useInView'
 import { getSkillIcon } from '../data/skillIcons'
 import data from '../data/portfolio.json'
+import TechMarquee from './TechMarquee'
 
 function SkillTag({ name }) {
   const Icon = getSkillIcon(name)
@@ -20,16 +21,19 @@ function Skills() {
 
   return (
     <section id="skills" ref={ref} className="relative min-h-screen flex items-center px-6 py-24 bg-slate-50 dark:bg-slate-900/50">
+      <div className="absolute inset-0 overflow-hidden">
+        <img src="/assets/images/skills-bg.jpg" alt="" aria-hidden="true" className="w-full h-full object-cover opacity-[0.03] dark:opacity-[0.06]" />
+      </div>
       <div className="w-full max-w-5xl mx-auto">
         <div className={`text-center mb-16 ${inView ? 'anim-fade-up in' : 'anim-fade-up'}`}>
-          <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400 uppercase">Expertise</span>
+          <span className="text-xs font-semibold tracking-widest accent-text uppercase">Expertise</span>
           <h2 className={`text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mt-2 section-title ${inView ? 'in' : ''}`}>
             Technical Skills
           </h2>
           <p className="text-slate-500 dark:text-slate-400 mt-5 max-w-md mx-auto">Technologies I work with daily</p>
         </div>
 
-        <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 stagger ${inView ? 'in' : ''}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger ${inView ? 'in' : ''}`}>
           {entries.slice(0, 6).map(([category, items]) => (
             <div key={category} className="card-hover bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-100 dark:border-slate-700/50 shadow-sm">
               <h3 className="text-xs font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-wider mb-3">{category}</h3>
@@ -49,7 +53,7 @@ function Skills() {
               <span className="hidden group-open:inline">Show less</span>
               <svg className={`w-4 h-4 transition-transform ${inView ? 'group-open:rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/></svg>
             </summary>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 stagger in">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 stagger in">
               {entries.slice(6).map(([category, items]) => (
                 <div key={category} className="card-hover bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-100 dark:border-slate-700/50 shadow-sm">
                   <h3 className="text-xs font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-wider mb-3">{category}</h3>
@@ -63,6 +67,11 @@ function Skills() {
             </div>
           </details>
         )}
+
+        <div className={`mt-16 ${inView ? 'anim-fade-up in' : 'anim-fade-up'}`} style={{ animationDelay: '0.5s' }}>
+          <p className="text-center text-xs font-semibold tracking-widest accent-text uppercase mb-4">Tech Stack</p>
+          <TechMarquee />
+        </div>
       </div>
     </section>
   )

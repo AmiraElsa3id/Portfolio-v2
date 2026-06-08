@@ -1,34 +1,40 @@
 import { memo } from 'react'
 import { useInView } from '../hooks/useInView'
+import { useTextScramble } from '../hooks/useTextScramble'
 import data from '../data/portfolio.json'
+import SplashCursor from './SplashCursor'
 
 function Header() {
   const { name, title, contact, titles, cv } = data
   const [ref, inView] = useInView()
+  const firstName = useTextScramble(name.split(' ')[0], { delay: 700, duration: 1000 })
+  const lastName = useTextScramble(name.split(' ').slice(1).join(' '), { delay: 700, duration: 1000 })
 
   return (
     <header
       ref={ref}
       className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"
     >
-      <div className="absolute inset-0 opacity-[0.04]" style={{
-        backgroundImage: 'radial-gradient(circle at 25% 25%, #8b5cf6 0%, transparent 50%), radial-gradient(circle at 75% 75%, #f59e0b 0%, transparent 50%)',
-      }} />
+      <div className="absolute inset-0">
+        <img src="/assets/images/hero-bg.jpg" alt="" aria-hidden="true" className="w-full h-full object-cover opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/90 to-slate-950" />
+      </div>
+      <SplashCursor TRANSPARENT={true} DENSITY_DISSIPATION={4} VELOCITY_DISSIPATION={3} CURL={5} SPLAT_RADIUS={0.15} SPLAT_FORCE={4000} RAINBOW_MODE={true} />
       <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
 
       <div className="relative text-center max-w-2xl mx-auto">
         <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 text-xs font-medium mb-8 anim-fade-down">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full accent-light-bg-dark border border-white/10 accent-text text-xs font-medium mb-8 anim-fade-down">
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
             Open to opportunities
           </div>
         </div>
 
         <h1 className={`text-5xl md:text-7xl font-bold tracking-tight mb-3 transition-all duration-700 delay-150 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-white">{name.split(' ')[0]}</span>{' '}
+          <span className="text-white">{firstName}</span>{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-amber-300">
-            {name.split(' ').slice(1).join(' ')}
+            {lastName}
           </span>
         </h1>
 
@@ -52,7 +58,7 @@ function Header() {
 
         <div className={`flex justify-center gap-3 transition-all duration-700 delay-[750ms] ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <a href={contact.linkedin} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-violet-600 hover:bg-violet-500 text-white rounded-xl text-sm font-medium transition-all hover:shadow-lg hover:shadow-violet-500/25 active:scale-[0.97]">
+            className="inline-flex items-center gap-2 px-5 py-2.5 accent-bg hover:brightness-110 text-white rounded-xl text-sm font-medium transition-all hover:shadow-lg active:scale-[0.97]">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>

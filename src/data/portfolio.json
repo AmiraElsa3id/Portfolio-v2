@@ -52,33 +52,33 @@
   "projects": [
     {
       "name": "Clinic Appointment System",
-      "tech": "Python, Django 6, DRF, MySQL, Bootstrap 5, Chart.js",
+      "tech": "Python, Django, DRF, MySQL, Bootstrap 5, Chart.js",
       "description": "Architected a multi-role platform with RBAC for 4 roles, automated slot generation, patient self-booking, appointment state machine, queue management, and EMR with prescriptions & lab tests. Built admin analytics dashboard with Chart.js (revenue, no-show rates, peak hours), CSV report exports, RESTful API for appointment CRUD, and in-app notifications for all events.",
       "links": {
-        "code": null,
+        "code": "https://github.com/AmiraElsa3id/Clinic-Appointment-System",
         "demo": null
       },
-      "image": null
+      "image": "/assets/images/clinic.png"
     },
     {
       "name": "Hotel Management System",
-      "tech": "Laravel 11, Vue 3, Inertia.js, MySQL, Stripe, Spatie RBAC",
-      "description": "Architected a full-scale hotel management platform with RBAC for Admins, Managers, Receptionists, and Clients using Spatie Laravel Permission with two isolated authentication guards. Engineered complex reservation workflows, room and floor allocation logic, and Stripe payment processing with webhook handling.",
+      "tech": "Laravel, Vue, Inertia.js, MySQL, Stripe, Tailwind CSS",
+      "description": "Built a full-scale hotel management platform with RBAC for Admins, Managers, Receptionists, and Clients. Implemented reservation workflows, room/floor allocation, and Stripe payment processing. Used Spatie Laravel Permission for granular role management across two isolated dashboards with separate authentication guards.",
       "links": {
-        "code": null,
-        "demo": null
+        "code": "https://github.com/AhmedMohO/hotel-system",
+        "demo": "https://www.linkedin.com/feed/update/urn:li:activity:7449488338350133248/"
       },
-      "image": null
+      "image": "/assets/images/Hotel.png"
     },
     {
       "name": "Cafeteria Management System",
-      "tech": "PHP 8.2, Custom MVC, MySQL (PDO), Bootstrap 5, Apache",
+      "tech": "PHP, Custom MVC, MySQL (PDO), Bootstrap, Apache",
       "description": "Built a production-grade platform from scratch using a custom PHP MVC framework with Composer autoloading, PDO database abstraction, and environment-based configuration — no external framework. Developed the full Admin Orders module with order lifecycle management, database transaction handling, and secure input validation deployed on Apache.",
       "links": {
         "code": "https://github.com/AhmedMohO/cafeteria-project",
-        "demo": null
+        "demo": "https://www.linkedin.com/posts/amera-mohammed_php-webdevelopment-mvc-ugcPost-7440020393433907202-Ore-/"
       },
-      "image": null
+      "image": "/assets/images/Cafe.png"
     },
     {
       "name": "BlogHub — Full-Stack Blog Platform",
@@ -88,7 +88,7 @@
         "code": "https://github.com/AmiraElsa3id/ITI-Blog",
         "demo": null
       },
-      "image": null
+      "image": "/assets/images/iti-blog.png"
     },
     {
       "name": "Linked Posts — Social Media Application",
@@ -111,6 +111,16 @@
       "image": "/assets/images/fresh-cart.png"
     },
     {
+      "name": "AI Chat Clone",
+      "tech": "React, Tailwind CSS, Express, Hugging Face API, Supabase, Whisper",
+      "description": "Built a full-featured AI chat app with 5 conversation modes (General, Coding, Reasoning, Creative, Image Gen), real-time token-by-token streaming via SSE, voice input with Whisper transcription, PDF/image file attachments, and FLUX.1-schnell image generation. Implemented token tracking with color-coded status, context management with automatic history trimming, prompt injection safety filtering, Supabase session persistence, dark/light theme, and a mobile-responsive adaptive layout with swipeable sidebar.",
+      "links": {
+        "code": "https://github.com/AmiraElsa3id/Ai-Chat-Clone",
+        "demo": "https://www.linkedin.com/posts/amera-mohammed_built-an-ai-chat-clone-part-of-my-vibe-ugcPost-7467582877506113537-QdiQ/"
+      },
+      "image": "/assets/images/ai-chat-clone.png"
+    },
+    {
       "name": "D-Pathy — AI-Powered Diabetic Retinopathy Detection",
       "tech": "Python, TensorFlow, Flutter",
       "description": "Graduation project — AI-powered mobile application for diabetic retinopathy detection. Awarded Excellent grade.",
@@ -118,7 +128,7 @@
         "code": "https://github.com/nadareda12001/D-pthy",
         "demo": "https://youtu.be/3Zspp3XEy4o"
       },
-      "image": null
+      "image": "/assets/images/d-pathy.png"
     }
   ],
   "education": [
@@ -126,7 +136,7 @@
       "degree": "ITI Diploma — Open Source Track (9 Months)",
       "school": "Information Technology Institute (ITI), Mansoura",
       "period": "2025 — Present",
-      "details": ["Covered HTML/CSS/JavaScript, UI frameworks, Linux, DevOps fundamentals, and Agile methodologies."]
+      "details": ["Covered PHP, Laravel, Python, Django, MySQL, Linux, Nginx, Apache, DevOps fundamentals, and agile practices."]
     },
     {
       "degree": "Master of Science in Computer Science",
@@ -146,7 +156,7 @@
       "period": "Sep 2019 — May 2023",
       "details": [
         "Cumulative GPA: 3.61/4.0 (Very Good) — Top 15% of graduating class.",
-        "Graduation Project: D-Pathy — AI-powered diabetic retinopathy detection app (Python, TensorFlow); awarded Excellent grade."
+        "Graduation Project: D-Pathy — AI-powered diabetic retinopathy detection app; awarded Excellent grade."
       ]
     }
   ],
