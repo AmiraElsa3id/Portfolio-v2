@@ -1,14 +1,11 @@
 import { memo } from 'react'
 import { useInView } from '../hooks/useInView'
-import { useTextScramble } from '../hooks/useTextScramble'
 import data from '../data/portfolio.json'
 import SplashCursor from './SplashCursor'
 
 function Header() {
   const { name, title, contact, titles, cv } = data
   const [ref, inView] = useInView()
-  const firstName = useTextScramble(name.split(' ')[0], { delay: 700, duration: 1000 })
-  const lastName = useTextScramble(name.split(' ').slice(1).join(' '), { delay: 700, duration: 1000 })
 
   return (
     <header
@@ -32,9 +29,9 @@ function Header() {
         </div>
 
         <h1 className={`text-5xl md:text-7xl font-bold tracking-tight mb-3 transition-all duration-700 delay-150 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-white">{firstName}</span>{' '}
+          <span className="text-white">{name.split(' ')[0]}</span>{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-amber-300">
-            {lastName}
+            {name.split(' ').slice(1).join(' ')}
           </span>
         </h1>
 
