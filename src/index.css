@@ -194,6 +194,26 @@ body ::selection { background: var(--sel-bg); color: var(--sel-text); }
   box-shadow: 0 12px 40px color-mix(in srgb, var(--accent) 15%, transparent);
 }
 
+/* ── Dynamic accent utilities (replaces hardcoded violet) ── */
+.accent-badge { background-color: var(--accent-bg); color: var(--accent); }
+.dark .accent-badge { background-color: var(--accent-bg-dark); }
+.btn-accent { background-color: var(--accent); color: white; }
+.btn-accent:hover { background-color: var(--accent-dark); }
+.btn-accent-ghost { color: var(--accent); background-color: var(--accent-bg); }
+.dark .btn-accent-ghost { background-color: var(--accent-bg-dark); }
+.btn-accent-ghost:hover { background-color: color-mix(in srgb, var(--accent) 20%, transparent); }
+.group:hover .group-hover-accent-text { color: var(--accent); }
+.hover-accent-text:hover { color: var(--accent); }
+.hover-accent-light-text:hover { color: var(--accent-light); }
+.hover-accent-border:hover { border-color: color-mix(in srgb, var(--accent) 50%, transparent); }
+.page-active { background-color: var(--accent); color: white; }
+.page-inactive:hover { background-color: var(--accent-bg); }
+.dark .page-inactive:hover { background-color: var(--accent-bg-dark); }
+.focus-accent:focus { border-color: var(--accent); }
+.focus-ring-accent:focus { box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 10%, transparent); }
+.skill-tag-hover:hover { background-color: var(--accent-bg); color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+.dark .skill-tag-hover:hover { background-color: var(--accent-bg-dark); color: var(--accent-light); }
+
 /* ── Reduce motion ────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

@@ -17,7 +17,7 @@ function Header() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/90 to-slate-950" />
       </div>
       <SplashCursor TRANSPARENT={true} DENSITY_DISSIPATION={4} VELOCITY_DISSIPATION={3} CURL={5} SPLAT_RADIUS={0.15} SPLAT_FORCE={4000} RAINBOW_MODE={true} />
-      <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
+      <div className="absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl animate-pulse" style={{ backgroundColor: 'color-mix(in srgb, var(--accent) 10%, transparent)', animationDuration: '4s' }} />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
 
       <div className="relative text-center max-w-2xl mx-auto">
@@ -30,7 +30,8 @@ function Header() {
 
         <h1 className={`text-5xl md:text-7xl font-bold tracking-tight mb-3 transition-all duration-700 delay-150 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="text-white">{name.split(' ')[0]}</span>{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-amber-300">
+          <span className="text-transparent bg-clip-text"
+            style={{ backgroundImage: 'linear-gradient(to right, var(--accent-light), #fcd34d)' }}>
             {name.split(' ').slice(1).join(' ')}
           </span>
         </h1>
@@ -39,11 +40,11 @@ function Header() {
         <p className={`text-sm text-slate-500 mb-8 transition-all duration-700 delay-[450ms] ${inView ? 'opacity-100' : 'opacity-0'}`}>{titles.join(' · ')}</p>
 
         <div className={`flex flex-wrap justify-center gap-3 text-xs text-slate-400 mb-10 transition-all duration-700 delay-[600ms] ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <a href={`tel:${contact.phone}`} className="flex items-center gap-1.5 hover:text-violet-300 transition px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10">
+          <a href={`tel:${contact.phone}`} className="flex items-center gap-1.5 hover-accent-light-text transition px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10">
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             {contact.phone}
           </a>
-          <a href={`mailto:${contact.email}`} className="flex items-center gap-1.5 hover:text-violet-300 transition px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10">
+          <a href={`mailto:${contact.email}`} className="flex items-center gap-1.5 hover-accent-light-text transition px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10">
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             {contact.email}
           </a>

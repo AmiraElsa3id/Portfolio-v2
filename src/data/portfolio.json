@@ -51,6 +51,36 @@
   ],
   "projects": [
     {
+      "name": "Node Posts — RESTful API with Payments",
+      "tech": "Node.js, Express, MongoDB, JWT, Mongoose, Nodemailer",
+      "description": "Production-ready RESTful API with JWT authentication, role-based access control (user, moderator, admin), full post CRUD, and an integrated donation system with Kashier payment gateway and webhook handling. Secured with Helmet, XSS sanitization, NoSQL injection prevention, and rate limiting. Automated transactional emails via Nodemailer with EJS templates.",
+      "links": {
+        "code": "https://github.com/AmiraElsa3id/Node-Posts",
+        "demo": null
+      },
+      "image": "/assets/images/node-posts-docs.png"
+    },
+    {
+      "name": "WhatsApp Clone — Real-Time Chat App",
+      "tech": "React, Node.js, Express, Socket.IO, Vite",
+      "description": "Real-time chat application with private messaging and multi-user group chats powered by WebSockets via Socket.IO. Features instant username-based joining (no registration required), live online user visibility, group room broadcasting, and session-based chat history. Users are automatically removed upon disconnection.",
+      "links": {
+        "code": "https://github.com/AmiraElsa3id/whatsapp-clone",
+        "demo": null
+      },
+      "image": "/assets/images/whatsapp-clone.png"
+    },
+    {
+      "name": "Smart Notes Workspace — Full-Stack Notes App",
+      "tech": "React, Redux Toolkit, TanStack Query, Node.js, MongoDB, Tailwind CSS",
+      "description": "Full-stack note-taking application with JWT authentication, full CRUD notes with categories, tags, pinning, and archiving. Supports markdown rendering, debounced full-text search across title, content, and tags, pagination, avatar uploads, and persistent dark/light theme. Monorepo structure with separate backend and frontend, Swagger API documentation, deployable to Vercel and MongoDB Atlas.",
+      "links": {
+        "code": "https://github.com/AmiraElsa3id/smart-notes-workspace",
+        "demo": null
+      },
+      "image": "/assets/images/smart-note.png"
+    },
+    {
       "name": "Clinic Appointment System",
       "tech": "Python, Django, DRF, MySQL, Bootstrap 5, Chart.js",
       "description": "Architected a multi-role platform with RBAC for 4 roles, automated slot generation, patient self-booking, appointment state machine, queue management, and EMR with prescriptions & lab tests. Built admin analytics dashboard with Chart.js (revenue, no-show rates, peak hours), CSV report exports, RESTful API for appointment CRUD, and in-app notifications for all events.",

@@ -7,7 +7,7 @@ import TechMarquee from './TechMarquee'
 function SkillTag({ name }) {
   const Icon = getSkillIcon(name)
   return (
-    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-100 dark:border-slate-600/30 hover:bg-violet-100 dark:hover:bg-violet-500/10 hover:text-violet-700 dark:hover:text-violet-300 hover:border-violet-300 dark:hover:border-violet-500/30 transition-all duration-200">
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-100 dark:border-slate-600/30 skill-tag-hover transition-all duration-200">
       {Icon && <Icon className="w-3.5 h-3.5 shrink-0" />}
       {name}
     </span>
@@ -36,7 +36,7 @@ function Skills() {
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger ${inView ? 'in' : ''}`}>
           {entries.slice(0, 6).map(([category, items]) => (
             <div key={category} className="card-hover bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-100 dark:border-slate-700/50 shadow-sm">
-              <h3 className="text-xs font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-wider mb-3">{category}</h3>
+              <h3 className="text-xs font-semibold accent-text uppercase tracking-wider mb-3">{category}</h3>
               <div className={`flex flex-wrap gap-1.5 tag-stagger ${inView ? 'in' : ''}`}>
                 {items.map((skill) => (
                   <SkillTag key={skill} name={skill} />
@@ -48,7 +48,7 @@ function Skills() {
 
         {entries.length > 6 && (
           <details className={`group mt-4 ${inView ? 'anim-fade-up in' : 'anim-fade-up'}`} style={{ animationDelay: '0.4s' }}>
-            <summary className="cursor-pointer text-sm text-violet-600 dark:text-violet-400 font-medium hover:text-violet-500 transition flex items-center gap-2 justify-center py-3 list-none">
+            <summary className="cursor-pointer text-sm accent-text font-medium transition flex items-center gap-2 justify-center py-3 list-none">
               <span className="group-open:hidden">Show more</span>
               <span className="hidden group-open:inline">Show less</span>
               <svg className={`w-4 h-4 transition-transform ${inView ? 'group-open:rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/></svg>
@@ -56,7 +56,7 @@ function Skills() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 stagger in">
               {entries.slice(6).map(([category, items]) => (
                 <div key={category} className="card-hover bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-100 dark:border-slate-700/50 shadow-sm">
-                  <h3 className="text-xs font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-wider mb-3">{category}</h3>
+                  <h3 className="text-xs font-semibold accent-text uppercase tracking-wider mb-3">{category}</h3>
                   <div className="flex flex-wrap gap-1.5 tag-stagger in">
                     {items.map((skill) => (
                       <SkillTag key={skill} name={skill} />

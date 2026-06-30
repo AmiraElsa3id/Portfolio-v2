@@ -22,8 +22,8 @@ function LanguageBar({ lang, level, width, inView }) {
       <div className="h-1.5 rounded-full bg-slate-100 dark:bg-slate-700 overflow-hidden">
         <div
           ref={barRef}
-          className="h-full rounded-full bg-gradient-to-r from-violet-500 to-amber-400 transition-all duration-1000 ease-out"
-          style={{ width: filled ? width : '0%' }}
+          className="h-full rounded-full transition-all duration-1000 ease-out"
+          style={{ width: filled ? width : '0%', background: 'linear-gradient(to right, var(--accent), #f59e0b)' }}
         />
       </div>
     </div>
@@ -38,7 +38,7 @@ function Honors() {
     <section id="honors" ref={ref} className="relative min-h-screen flex items-center px-6 py-24 bg-slate-50 dark:bg-slate-900/50">
       <div className="w-full max-w-4xl mx-auto">
         <div className={`text-center mb-16 ${inView ? 'anim-fade-up in' : 'anim-fade-up'}`}>
-          <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400 uppercase">Recognition</span>
+          <span className="text-xs font-semibold tracking-widest accent-text uppercase">Recognition</span>
           <h2 className={`text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mt-2 section-title ${inView ? 'in' : ''}`}>
             Honors & Languages
           </h2>
@@ -48,7 +48,7 @@ function Honors() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className={`anim-fade-up ${inView ? 'in' : ''}`}>
             <div className="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700/50 h-full">
-              <h3 className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400 uppercase mb-4 flex items-center gap-2">
+              <h3 className="text-xs font-semibold tracking-widest accent-text uppercase mb-4 flex items-center gap-2">
                 <span className="text-amber-500">★</span>
                 Achievements
               </h3>
@@ -65,7 +65,7 @@ function Honors() {
 
           <div className={`anim-fade-up ${inView ? 'in' : ''}`} style={{ animationDelay: '0.15s' }}>
             <div className="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700/50 h-full">
-              <h3 className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400 uppercase mb-4 flex items-center gap-2">
+              <h3 className="text-xs font-semibold tracking-widest accent-text uppercase mb-4 flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 Languages
               </h3>

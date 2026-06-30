@@ -50,9 +50,10 @@ function Chatbot() {
               <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                   msg.role === 'user'
-                    ? 'bg-violet-600 text-white rounded-br-sm'
+                    ? 'text-white rounded-br-sm'
                     : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-bl-sm'
-                }`}>
+                }`}
+                style={msg.role === 'user' ? { backgroundColor: 'var(--accent)' } : {}}>
                   {msg.text}
                 </div>
               </div>
@@ -61,7 +62,8 @@ function Chatbot() {
               <div className="flex flex-wrap gap-1.5 pt-1">
                 {['Skills?', 'Experience?', 'Contact?'].map((q) => (
                   <button key={q} onClick={() => send(q)}
-                    className="text-[11px] bg-violet-50 dark:bg-violet-500/10 hover:bg-violet-100 dark:hover:bg-violet-500/20 text-violet-600 dark:text-violet-400 border border-violet-200 dark:border-violet-500/20 px-2.5 py-1 rounded-full transition-all">
+                    className="text-[11px] accent-badge px-2.5 py-1 rounded-full transition-all border"
+                    style={{ borderColor: 'color-mix(in srgb, var(--accent) 30%, transparent)' }}>
                     {q}
                   </button>
                 ))}
@@ -74,9 +76,9 @@ function Chatbot() {
               onChange={e => setInput(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && handleSend()}
               placeholder="Ask about their CV..."
-              className="flex-1 px-3 py-2 text-sm border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus:border-violet-400 transition bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400" />
+              className="flex-1 px-3 py-2 text-sm border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus-accent transition bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400" />
             <button onClick={handleSend} disabled={!input.trim()}
-              className="px-3 py-2 bg-violet-600 text-white rounded-xl text-sm font-medium hover:bg-violet-500 disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center justify-center">
+              className="px-3 py-2 btn-accent rounded-xl text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center justify-center">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
             </button>
           </div>
@@ -84,7 +86,7 @@ function Chatbot() {
       )}
 
       <button onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-xl bg-violet-600 text-white shadow-lg hover:bg-violet-500 hover:shadow-violet-500/25 hover:scale-105 transition-all active:scale-95 flex items-center justify-center">
+        className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-xl btn-accent shadow-lg hover:shadow-lg hover:scale-105 transition-all active:scale-95 flex items-center justify-center">
         {open ? (
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
         ) : (

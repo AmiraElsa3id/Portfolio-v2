@@ -42,16 +42,16 @@ function Contact() {
         <form onSubmit={handleSubmit} className={`space-y-4 anim-fade-up ${inView ? 'in' : ''}`} style={{ animationDelay: '0.15s' }}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input type="text" name="name" required placeholder="Your Name"
-              className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 outline-none focus:border-violet-400 dark:focus:border-violet-500 focus:ring-2 focus:ring-violet-500/10 transition text-sm" />
+              className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 outline-none focus-accent focus-ring-accent transition text-sm" />
             <input type="email" name="email" required placeholder="Your Email"
-              className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 outline-none focus:border-violet-400 dark:focus:border-violet-500 focus:ring-2 focus:ring-violet-500/10 transition text-sm" />
+              className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 outline-none focus-accent focus-ring-accent transition text-sm" />
           </div>
           <input type="text" name="subject" placeholder="Subject"
-            className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 outline-none focus:border-violet-400 dark:focus:border-violet-500 focus:ring-2 focus:ring-violet-500/10 transition text-sm" />
+            className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 outline-none focus-accent focus-ring-accent transition text-sm" />
           <textarea name="message" rows="4" required placeholder="Your Message"
-            className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 outline-none focus:border-violet-400 dark:focus:border-violet-500 focus:ring-2 focus:ring-violet-500/10 transition text-sm resize-none" />
+            className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 outline-none focus-accent focus-ring-accent transition text-sm resize-none" />
           <button type="submit" disabled={state.status === 'sending'}
-            className="w-full py-3 bg-violet-600 hover:bg-violet-500 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-xl font-medium transition-all text-sm active:scale-[0.98] hover:shadow-lg hover:shadow-violet-500/25">
+            className="w-full py-3 btn-accent disabled:opacity-50 disabled:cursor-not-allowed rounded-xl font-medium transition-all text-sm active:scale-[0.98] hover:shadow-lg">
             {state.status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>
           {state.message && (

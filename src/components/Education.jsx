@@ -36,7 +36,7 @@ function Education() {
                     <ul className="mt-2 space-y-1">
                       {edu.details.map((d, j) => (
                         <li key={j} className="flex gap-2 text-xs text-slate-500 dark:text-slate-400">
-                          <span className="text-violet-400 mt-0.5">·</span>
+                          <span className="accent-text mt-0.5">·</span>
                           <span>{d}</span>
                         </li>
                       ))}

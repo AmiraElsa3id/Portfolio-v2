@@ -10,7 +10,7 @@ function Experience() {
     <section id="experience" ref={ref} className="relative min-h-screen flex items-center px-6 py-24 bg-white dark:bg-slate-950">
       <div className="w-full max-w-4xl mx-auto">
         <div className={`text-center mb-16 ${inView ? 'anim-fade-up in' : 'anim-fade-up'}`}>
-          <span className="text-xs font-semibold tracking-widest text-violet-600 dark:text-violet-400 uppercase">Career</span>
+          <span className="text-xs font-semibold tracking-widest accent-text uppercase">Career</span>
           <h2 className={`text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mt-2 section-title ${inView ? 'in' : ''}`}>Experience</h2>
           <p className="text-slate-500 dark:text-slate-400 mt-5">Where I have worked</p>
         </div>
@@ -33,7 +33,7 @@ function Experience() {
                 <ul className="space-y-2">
                   {job.highlights.map((h, j) => (
                     <li key={j} className="flex gap-2.5 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                      <span className="w-1.5 h-1.5 rounded-full bg-violet-400 mt-1.5 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: 'var(--accent)' }} />
                       <span>{h}</span>
                     </li>
                   ))}
