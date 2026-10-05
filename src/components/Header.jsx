@@ -2,6 +2,7 @@ import { memo } from 'react'
 import { useInView } from '../hooks/useInView'
 import data from '../data/portfolio.json'
 import SplashCursor from './SplashCursor'
+import ErrorBoundary from './ErrorBoundary'
 
 function Header() {
   const { name, title, contact, titles, cv } = data
@@ -16,7 +17,9 @@ function Header() {
         <img src="/assets/images/hero-bg.jpg" alt="" aria-hidden="true" className="w-full h-full object-cover opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/90 to-slate-950" />
       </div>
-      <SplashCursor TRANSPARENT={true} DENSITY_DISSIPATION={4} VELOCITY_DISSIPATION={3} CURL={5} SPLAT_RADIUS={0.15} SPLAT_FORCE={4000} RAINBOW_MODE={true} />
+      <ErrorBoundary>
+        <SplashCursor TRANSPARENT={true} DENSITY_DISSIPATION={4} VELOCITY_DISSIPATION={3} CURL={5} SPLAT_RADIUS={0.15} SPLAT_FORCE={4000} RAINBOW_MODE={true} />
+      </ErrorBoundary>
       <div className="absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl animate-pulse" style={{ backgroundColor: 'color-mix(in srgb, var(--accent) 10%, transparent)', animationDuration: '4s' }} />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
 

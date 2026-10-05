@@ -50,7 +50,12 @@ function SplashCursor({
     }
 
     let pointers = [new pointerPrototype()]
-    const { gl, ext } = getWebGLContext(canvas)
+    const ctx = getWebGLContext(canvas)
+    // WebGL is unavailable (disabled, blocklisted driver, privacy hardenings such
+    // as LibreWolf/Mullvad/Tor or resistFingerprinting). Bail out before touching
+    // `gl` so the decorative effect is skipped instead of crashing the whole app.
+    if (!ctx) return
+    const { gl, ext } = ctx
     if (!ext.supportLinearFiltering) {
       config.DYE_RESOLUTION = 256
       config.SHADING = false
@@ -61,6 +66,9 @@ function SplashCursor({
       let gl = canvas.getContext('webgl2', params)
       const isWebGL2 = !!gl
       if (!isWebGL2) gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params)
+
+      // No context from any backend: nothing to set up.
+      if (!gl) return null
 
       let halfFloat, supportLinearFiltering
       if (isWebGL2) {
