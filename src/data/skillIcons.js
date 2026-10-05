@@ -1,13 +1,12 @@
 import {
   SiReact, SiNextdotjs, SiVuedotjs, SiJquery, SiDjango, SiLaravel,
   SiTypescript, SiJavascript, SiHtml5, SiCss, SiPhp, SiPython,
-  SiTailwindcss, SiBootstrap, SiSass, SiMysql, SiMongodb,
+  SiTailwindcss, SiBootstrap, SiMysql, SiMongodb,
   SiGit, SiGithub, SiLinux, SiNginx, SiApache, SiFigma,
   SiStripe, SiPostman,
+  SiVite, SiReactrouter, SiReactquery, SiAxios, SiChartdotjs, SiFramer,
 } from 'react-icons/si'
-import {
-  FaNodeJs, FaAws, FaDocker, FaSass,
-} from 'react-icons/fa'
+import { FaSass } from 'react-icons/fa'
 import {
   TbBrandRedux, TbApi, TbAccessible, TbComponents, TbSql,
   TbChartBar, TbServer, TbCode, TbUsers, TbMessage, TbLock,
@@ -28,8 +27,9 @@ const iconMap = {
   'next.js': SiNextdotjs,
   'vue.js': SiVuedotjs,
   jquery: SiJquery,
-  django: SiDjango,
   laravel: SiLaravel,
+  vite: SiVite,
+  'react router': SiReactrouter,
 
   // Styling
   'tailwind css': SiTailwindcss,
@@ -43,10 +43,20 @@ const iconMap = {
   'react hooks': SiReact,
   redux: TbBrandRedux,
 
+  // Data & Libraries
+  'tanstack query': SiReactquery,
+  'react query': SiReactquery,
+  axios: SiAxios,
+  'chart.js': SiChartdotjs,
+  chartjs: SiChartdotjs,
+  'framer motion': SiFramer,
+
   // APIs & Auth
   'restful apis': TbApi,
+  'rest api': TbApi,
   'jwt authentication': TbLock,
   'stripe payment': SiStripe,
+  stripe: SiStripe,
   rbac: TbUsers,
   'spatie laravel permission': SiLaravel,
 

@@ -51,6 +51,83 @@
   ],
   "projects": [
     {
+      "name": "FreshCart — Next.js E-Commerce",
+      "tech": "Next.js, TypeScript, Tailwind CSS, REST API, Stripe",
+      "description": "Full-storefront e-commerce build on the Next.js App Router — category and brand browsing, a large product catalogue, cart and wishlist, authentication, and a responsive checkout flow.",
+      "links": {
+        "code": null,
+        "demo": "https://freshcart-route.vercel.app/"
+      },
+      "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
+      "image": "/assets/images/freshcart-next.png"
+    },
+    {
+      "name": "Cosmos — Space Dashboard",
+      "tech": "React, Tailwind CSS, REST API",
+      "description": "Space data dashboard consuming the NASA APOD and SpaceDevs APIs — astronomy picture of the day, upcoming launches, a planet explorer with orbital stats, and a planet comparison table.",
+      "links": {
+        "code": null,
+        "demo": "https://cosmos-space-dashboard-route.vercel.app/"
+      },
+      "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
+      "image": "/assets/images/cosmos-space.png"
+    },
+    {
+      "name": "Wanderlust — Travel Planner",
+      "tech": "React, Tailwind CSS, REST API",
+      "description": "Travel-planning dashboard covering 90+ countries: public holidays, city events, 7-day weather, a long-weekend finder, live currency conversion, sunrise/sunset times, and saved trip plans.",
+      "links": {
+        "code": null,
+        "demo": "https://city-specs-route.vercel.app/"
+      },
+      "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
+      "image": "/assets/images/city-specs.png"
+    },
+    {
+      "name": "QuizMaster — Quiz Game",
+      "tech": "React, Tailwind CSS, REST API",
+      "description": "Configurable quiz game with player name, category, difficulty and round setup, XP-based scoring, and a dynamic trivia API feeding the questions through a modern arena UI.",
+      "links": {
+        "code": null,
+        "demo": "https://quiz-master-route.vercel.app/"
+      },
+      "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
+      "image": "/assets/images/quiz-master.png"
+    },
+    {
+      "name": "Mudabbir — Personal Finance Dashboard",
+      "tech": "React, Tailwind CSS, Chart.js",
+      "description": "Arabic RTL personal-finance dashboard with balances, income vs. expenses, recent transactions, budgets, monthly bills, savings, payment methods, and weekly cash-flow charts.",
+      "links": {
+        "code": null,
+        "demo": "https://mudabbir.vercel.app/"
+      },
+      "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
+      "image": "/assets/images/mudabbir.png"
+    },
+    {
+      "name": "The UX Review — Brutalist Blog",
+      "tech": "React, Vite, Tailwind CSS",
+      "description": "Editorial blog with a bold brutalist identity — hero, trending and latest articles, author profiles, and a community/newsletter section built from reusable content components.",
+      "links": {
+        "code": null,
+        "demo": "https://the-ux-review-blog.vercel.app/"
+      },
+      "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
+      "image": "/assets/images/ux-review.png"
+    },
+    {
+      "name": "Arabic Developer Portfolio",
+      "tech": "React, Tailwind CSS",
+      "description": "RTL Arabic single-page portfolio — hero, about, skills, a filterable project gallery, experience timeline, testimonials, and a contact form — with live theme and font customisation.",
+      "links": {
+        "code": null,
+        "demo": "https://portfolio-route.vercel.app/"
+      },
+      "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
+      "image": "/assets/images/portfolio-route.png"
+    },
+    {
       "name": "Node Posts — RESTful API with Payments",
       "tech": "Node.js, Express, MongoDB, JWT, Mongoose, Nodemailer",
       "description": "Production-ready RESTful API with JWT authentication, role-based access control (user, moderator, admin), full post CRUD, and an integrated donation system with Kashier payment gateway and webhook handling. Secured with Helmet, XSS sanitization, NoSQL injection prevention, and rate limiting. Automated transactional emails via Nodemailer with EJS templates.",
