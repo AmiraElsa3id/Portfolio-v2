@@ -5,6 +5,12 @@ import data from '../data/portfolio.json'
 
 const PER_PAGE = 6
 
+// A demo pointing at a LinkedIn post or a YouTube video is presented as a
+// "Video Demo"; anything else (a deployed site) is a "Live Demo".
+function isVideoDemo(url) {
+  return /(?:linkedin\.com|youtube\.com|youtu\.be)/i.test(url)
+}
+
 function ProjectImage({ src, alt }) {
   const base = src.replace(/\.\w+$/, '')
   return (
@@ -80,8 +86,12 @@ function ProjectModal({ proj, onClose }) {
             {proj.links.demo && (
               <a href={proj.links.demo} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium btn-accent-ghost rounded-lg transition">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                Live Demo
+                {isVideoDemo(proj.links.demo) ? (
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M10 15.5v-7l6 3.5-6 3.5z"/><path fillRule="evenodd" d="M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75zM4.5 6a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h15a.75.75 0 00.75-.75V6.75a.75.75 0 00-.75-.75h-15z"/></svg>
+                ) : (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                )}
+                {isVideoDemo(proj.links.demo) ? 'Video Demo' : 'Live Demo'}
               </a>
             )}
           </div>
@@ -156,8 +166,12 @@ function Projects() {
                   {proj.links.demo && (
                     <a href={proj.links.demo} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
                       className="text-xs text-slate-500 dark:text-slate-400 hover-accent-text font-medium transition flex items-center gap-1">
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                      Demo →
+                      {isVideoDemo(proj.links.demo) ? (
+                        <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M10 15.5v-7l6 3.5-6 3.5z"/><path fillRule="evenodd" d="M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75zM4.5 6a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h15a.75.75 0 00.75-.75V6.75a.75.75 0 00-.75-.75h-15z"/></svg>
+                      ) : (
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                      )}
+                      {isVideoDemo(proj.links.demo) ? 'Video →' : 'Demo →'}
                     </a>
                   )}
                 </div>
