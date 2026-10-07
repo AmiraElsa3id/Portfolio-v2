@@ -135,7 +135,7 @@
     {
       "name": "RestoMind — AI-Powered Restaurant Management",
       "tech": "Next.js, NestJS, Python FastAPI, MongoDB",
-      "description": "Smart restaurant management platform featuring a Next.js frontend, NestJS/MongoDB backend, and a Python FastAPI AI forecasting model. Implemented reservation workflows, role-based access control, and Stripe payment processing.",
+      "description": "Smart restaurant management platform featuring a Next.js frontend, NestJS/MongoDB backend, and a Python FastAPI AI forecasting model. Front: https://github.com/AhmedMohO/restomind-app | Back: https://github.com/KhaledAlmorse/RestoMindAPI | Model: https://github.com/AmiraElsa3id/prediction-model. Implemented reservation workflows, role-based access control, and Stripe payment processing.",
       "links": {
         "code": "https://github.com/AmiraElsa3id/prediction-model",
         "demo": "https://www.linkedin.com/feed/update/urn:li:activity:7497253809732358144/"
