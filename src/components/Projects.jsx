@@ -200,27 +200,48 @@ function Projects() {
                   {proj.links.code && (
                     <a href={proj.links.code} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
                       className="text-xs text-slate-500 dark:text-slate-400 hover-accent-text font-medium transition flex items-center gap-1">
-                      <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                      Code →
-                    </a>
-                  )}
-                  {proj.links.demo && (
-                    <a href={proj.links.demo} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
-                      className="text-xs text-slate-500 dark:text-slate-400 hover-accent-text font-medium transition flex items-center gap-1">
-                      {isVideoDemo(proj.links.demo) ? (
-                        <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M10 15.5v-7l6 3.5-6 3.5z"/><path fillRule="evenodd" d="M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75zM4.5 6a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h15a.75.75 0 00.75-.75V6.75a.75.75 0 00-.75-.75h-15z"/></svg>
-                      ) : (
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                      )}
-                      {isVideoDemo(proj.links.demo) ? 'Video →' : 'Demo →'}
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        )}
+                       <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                       Code →
+                     </a>
+                   )}
+                   {proj.links.demo && (
+                     <a href={proj.links.demo} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
+                       className="text-xs text-slate-500 dark:text-slate-400 hover-accent-text font-medium transition flex items-center gap-1">
+                       {isVideoDemo(proj.links.demo) ? (
+                         <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M10 15.5v-7l6 3.5-6 3.5z"/><path fillRule="evenodd" d="M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0119.5 19.5h-15a2.25 2.25 0 01-2.25-2.25V6.75zM4.5 6a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h15a.75.75 0 00.75-.75V6.75a.75.75 0 00-.75-.75h-15z"/></svg>
+                       ) : (
+                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                       )}
+                       {isVideoDemo(proj.links.demo) ? 'Video →' : 'Demo →'}
+                     </a>
+                   )}
+                   {proj.links.front && (
+                     <a href={proj.links.front} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
+                       className="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-accent-hover hover:text-white transition-colors flex items-center gap-1.5">
+                       <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-2l-4-4H6z"/><path fillRule="evenodd" d="M8 7a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2vz"/></svg>
+                       Front
+                     </a>
+                   )}
+                   {proj.links.back && (
+                     <a href={proj.links.back} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
+                       className="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-accent-hover hover:text-white transition-colors flex items-center gap-1.5">
+                       <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-2l-4-4H6z"/><path fillRule="evenodd" d="M8 7a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2vz"/></svg>
+                       Back
+                     </a>
+                   )}
+                   {proj.links.model && (
+                     <a href={proj.links.model} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
+                       className="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-accent-hover hover:text-white transition-colors flex items-center gap-1.5">
+                       <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-2l-4-4H6z"/><path fillRule="evenodd" d="M8 7a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2vz"/></svg>
+                       Model
+                     </a>
+                   )}
+                 </div>
+               </div>
+             </div>
+           ))}
+         </div>
+         )}
 
         {totalPages > 1 && (
           <div className="flex items-center justify-center gap-2 mt-10">
