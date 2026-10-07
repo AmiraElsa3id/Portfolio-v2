@@ -182,6 +182,13 @@ function Projects() {
                   )}
                 </div>
                 <h3 className="text-base font-semibold text-slate-900 dark:text-white mb-1 group-hover-accent-text transition-colors">{proj.name}</h3>
+                <div className="flex gap-1.5 mb-3">
+                  {proj.focus && proj.focus.map((f, idx) => (
+                    <span key={f} className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded text-[0.65em] font-medium border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:bg-accent-hover border-transparent hover:text-white transition-all">
+                      {f}
+                    </span>
+                  ))}
+                </div>
                 {proj.context && (
                   <span className="inline-flex items-center gap-1 mb-2 px-1.5 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-500 dark:bg-slate-700/50 dark:text-slate-400">
                     <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.42a12 12 0 01.84 4.42c0 1.9-.55 3.67-1.5 5.16M12 14l-6.16-3.42A12 12 0 005 15c0 1.9.55 3.67 1.5 5.16"/></svg>
