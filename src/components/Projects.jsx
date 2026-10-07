@@ -77,6 +77,33 @@ function ProjectModal({ proj, onClose }) {
 
           <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">{proj.description}</p>
 
+          {(proj.links.front || proj.links.back || proj.links.model) && (
+            <div className="flex flex-wrap gap-2 mb-5">
+              <span className="text-xs font-medium text-slate-500 dark:text-slate-400 self-center mr-1">Repositories:</span>
+              {proj.links.front && (
+                <a href={proj.links.front} target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover-accent-border hover-accent-text transition">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-2l-4-4H6z"/><path fillRule="evenodd" d="M8 7a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2vz"/></svg>
+                  Frontend
+                </a>
+              )}
+              {proj.links.back && (
+                <a href={proj.links.back} target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover-accent-border hover-accent-text transition">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-2l-4-4H6z"/><path fillRule="evenodd" d="M8 7a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2vz"/></svg>
+                  Backend
+                </a>
+              )}
+              {proj.links.model && (
+                <a href={proj.links.model} target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover-accent-border hover-accent-text transition">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-2l-4-4H6z"/><path fillRule="evenodd" d="M8 7a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2vz"/></svg>
+                  AI Model
+                </a>
+              )}
+            </div>
+          )}
+
           {proj.context && (
             <p className="flex items-start gap-2 text-xs text-slate-500 dark:text-slate-400 mb-6">
               <svg className="w-3.5 h-3.5 mt-0.5 shrink-0 accent-text" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.42a12 12 0 01.84 4.42c0 1.9-.55 3.67-1.5 5.16M12 14l-6.16-3.42A12 12 0 005 15c0 1.9.55 3.67 1.5 5.16M12 21a9 9 0 01-9-9m9 9a9 9 0 009-9"/></svg>
@@ -213,27 +240,6 @@ function Projects() {
                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
                        )}
                        {isVideoDemo(proj.links.demo) ? 'Video →' : 'Demo →'}
-                     </a>
-                   )}
-                   {proj.links.front && (
-                     <a href={proj.links.front} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
-                       className="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-accent-hover hover:text-white transition-colors flex items-center gap-1.5">
-                       <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-2l-4-4H6z"/><path fillRule="evenodd" d="M8 7a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2vz"/></svg>
-                       Front
-                     </a>
-                   )}
-                   {proj.links.back && (
-                     <a href={proj.links.back} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
-                       className="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-accent-hover hover:text-white transition-colors flex items-center gap-1.5">
-                       <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-2l-4-4H6z"/><path fillRule="evenodd" d="M8 7a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2vz"/></svg>
-                       Back
-                     </a>
-                   )}
-                   {proj.links.model && (
-                     <a href={proj.links.model} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
-                       className="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-accent-hover hover:text-white transition-colors flex items-center gap-1.5">
-                       <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-2l-4-4H6z"/><path fillRule="evenodd" d="M8 7a2 2 0 002 2h4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2vz"/></svg>
-                       Model
                      </a>
                    )}
                  </div>
