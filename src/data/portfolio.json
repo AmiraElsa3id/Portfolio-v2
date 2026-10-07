@@ -199,11 +199,11 @@
     },
     {
       "name": "Linked Posts — Social Media Application",
-      "tech": "React, REST API, JWT Auth",
-      "description": "Built a responsive social networking application featuring user profiles, post feeds, likes, comments, and a follow/unfollow system. Implemented JWT-based authentication, protected routing, and real-time UI updates within a modular React component architecture.",
+      "tech": "Next.js, TypeScript, Tailwind CSS, REST API, JWT Auth",
+      "description": "Responsive social platform built with the Next.js App Router — timeline feed, posts, nested comments, likes, bookmarks, notifications, profiles with follow/unfollow, and friend suggestions. Includes JWT authentication, protected routes, dark/light mode, and polling-based live updates for Vercel.",
       "links": {
-        "code": "https://github.com/amera-elsa3id-dev/social-app-v2",
-        "demo": "https://social-app-v2-eight.vercel.app"
+        "code": "https://github.com/AmiraElsa3id/Linked-Posts",
+        "demo": "https://linked-posts-alpha.vercel.app/"
       },
       "image": "/assets/images/linked-posts.png"
     },
