@@ -28,29 +28,43 @@ const FONTS = [
   { id: 'space', name: 'Space Grotesk' },
 ]
 
+function getInitialTheme() {
+  if (typeof window === 'undefined') return false
+  const saved = localStorage.getItem('theme')
+  const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches
+  return saved === 'dark' || (!saved && prefers)
+}
+
+function getInitialAccent() {
+  if (typeof window === 'undefined') return 'violet'
+  return localStorage.getItem('accent') || 'violet'
+}
+
+function getInitialFont() {
+  if (typeof window === 'undefined') return 'inter'
+  return localStorage.getItem('font') || 'inter'
+}
+
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [panelOpen, setPanelOpen] = useState(false)
-  const [isDark, setIsDark] = useState(false)
-  const [accent, setAccent] = useState('violet')
-  const [font, setFont] = useState('inter')
+  const [isDark, setIsDark] = useState(getInitialTheme)
+  const [accent, setAccent] = useState(getInitialAccent)
+  const [font, setFont] = useState(getInitialFont)
   const active = useActiveSection(SECTIONS.map(s => s.id))
 
   useEffect(() => {
-    const saved = localStorage.getItem('theme')
-    const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches
-    if (saved === 'dark' || (!saved && prefers)) {
-      setIsDark(true)
-      document.documentElement.classList.add('dark')
-    }
-    const savedAccent = localStorage.getItem('accent') || 'violet'
-    const savedFont = localStorage.getItem('font') || 'inter'
-    setAccent(savedAccent)
-    setFont(savedFont)
-    document.documentElement.setAttribute('data-accent', savedAccent)
-    document.documentElement.setAttribute('data-font', savedFont)
-  }, [])
+    document.documentElement.classList.toggle('dark', isDark)
+  }, [isDark])
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-accent', accent)
+  }, [accent])
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-font', font)
+  }, [font])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -61,7 +75,6 @@ function Navbar() {
   const toggle = () => {
     setIsDark(p => {
       const next = !p
-      document.documentElement.classList.toggle('dark', next)
       localStorage.setItem('theme', next ? 'dark' : 'light')
       return next
     })
@@ -69,13 +82,11 @@ function Navbar() {
 
   const setAccentTheme = (id) => {
     setAccent(id)
-    document.documentElement.setAttribute('data-accent', id)
     localStorage.setItem('accent', id)
   }
 
   const setFontTheme = (id) => {
     setFont(id)
-    document.documentElement.setAttribute('data-font', id)
     localStorage.setItem('font', id)
   }
 

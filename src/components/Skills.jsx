@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { memo, createElement } from 'react'
 import { useInView } from '../hooks/useInView'
 import { getSkillIcon } from '../data/skillIcons'
 import data from '../data/portfolio.json'
@@ -8,7 +8,7 @@ function SkillTag({ name }) {
   const Icon = getSkillIcon(name)
   return (
     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium border border-slate-100 dark:border-slate-600/30 skill-tag-hover transition-all duration-200">
-      {Icon && <Icon className="w-3.5 h-3.5 shrink-0" />}
+      {Icon && createElement(Icon, { className: 'w-3.5 h-3.5 shrink-0' })}
       {name}
     </span>
   )

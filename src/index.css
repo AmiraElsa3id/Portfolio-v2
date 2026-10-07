@@ -43,16 +43,9 @@ body ::selection { background: var(--sel-bg); color: var(--sel-text); }
 
 /* ── Accent utility classes ───────────────────── */
 .accent-bg { background-color: var(--accent); }
-.accent-bg-hover:hover { background-color: var(--accent); }
 .accent-text { color: var(--accent); }
-.accent-text-hover:hover { color: var(--accent); }
-.accent-border { border-color: var(--accent); }
-.accent-ring:focus { outline: none; ring-color: var(--accent); }
 .accent-light-bg { background-color: var(--accent-bg); }
 .accent-light-bg-dark { background-color: var(--accent-bg-dark); }
-.accent-gradient { background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
-.accent-shadow-hover:hover { box-shadow: 0 12px 40px color-mix(in srgb, var(--accent) 15%, transparent); }
-.dark .accent-shadow-hover:hover { box-shadow: 0 12px 40px color-mix(in srgb, var(--accent) 10%, transparent); }
 
 /* ── Keyframes ────────────────────────────────── */
 @keyframes fade-up {
@@ -63,38 +56,6 @@ body ::selection { background: var(--sel-bg); color: var(--sel-text); }
   from { opacity: 0; transform: translateY(-16px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes fade-left {
-  from { opacity: 0; transform: translateX(-24px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes fade-right {
-  from { opacity: 0; transform: translateX(24px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes scale-in {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-14px); }
-}
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-@keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.1); }
-  50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.25); }
-}
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
-}
-@keyframes blink {
-  50% { border-color: transparent; }
-}
 @keyframes line-grow {
   from { width: 0; }
   to { width: 3rem; }
@@ -104,9 +65,6 @@ body ::selection { background: var(--sel-bg); color: var(--sel-text); }
   60% { transform: scale(1.05); }
   100% { transform: scale(1); opacity: 1; }
 }
-@keyframes bar-fill {
-  from { width: 0 !important; }
-}
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -114,14 +72,9 @@ body ::selection { background: var(--sel-bg); color: var(--sel-text); }
 
 /* ── Entrance classes ─────────────────────────── */
 .anim-fade-up     { opacity: 0; transform: translateY(32px); }
-.anim-fade-left   { opacity: 0; transform: translateX(-24px); }
-.anim-fade-right  { opacity: 0; transform: translateX(24px); }
-.anim-scale       { opacity: 0; transform: scale(0.9); }
+.anim-fade-down   { animation: fade-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
 .anim-fade-up.in    { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-.anim-fade-left.in  { animation: fade-left 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-.anim-fade-right.in { animation: fade-right 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-.anim-scale.in      { animation: scale-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
 /* ── Stagger grid ─────────────────────────────── */
 .stagger > * {
@@ -173,9 +126,6 @@ body ::selection { background: var(--sel-bg); color: var(--sel-text); }
 }
 
 /* ── Language bar fill ────────────────────────── */
-.lang-bar-fill {
-  animation: bar-fill 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
 
 /* ── Tech Marquee ─────────────────────────────── */
 .marquee-track {
@@ -220,7 +170,7 @@ body ::selection { background: var(--sel-bg); color: var(--sel-text); }
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-  .anim-fade-up, .anim-fade-left, .anim-fade-right, .anim-scale,
+  .anim-fade-up, .anim-fade-down,
   .stagger > *, .tag-stagger > * { opacity: 1; transform: none; }
   .section-title::after { width: 3rem; }
 }

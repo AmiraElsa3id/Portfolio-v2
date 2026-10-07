@@ -113,8 +113,6 @@ export function findAnswer(question) {
     }
   }
 
-  const generalKnowledge = knowledge.filter(k => k.category !== 'personal')
-  const random = generalKnowledge[Math.floor(Math.random() * generalKnowledge.length)]
   return {
     answer: `I can only answer questions based on Amera's CV. Try asking about skills, experience, projects, education, or languages. For example: "${sampleQuestions[Math.floor(Math.random() * sampleQuestions.length)]}"`
   }
