@@ -73,7 +73,6 @@ const iconMap = {
   'spatie laravel permission': SiLaravel,
 
   // Backend
-  'laravel 11': SiLaravel,
   'custom php mvc': SiPhp,
   postman: SiPostman,
   'api design': TbApi,

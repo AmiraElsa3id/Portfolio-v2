@@ -5,6 +5,15 @@ import data from '../data/portfolio.json'
 
 const PER_PAGE = 6
 
+// Filter tabs map to a project's `focus` tags in portfolio.json.
+const FILTERS = [
+  { id: 'all', label: 'All' },
+  { id: 'frontend', label: 'Frontend' },
+  { id: 'backend', label: 'Backend' },
+  { id: 'full-stack', label: 'Full-Stack' },
+  { id: 'ai-ml', label: 'AI / ML' },
+]
+
 // A demo pointing at a LinkedIn post or a YouTube video is presented as a
 // "Video Demo"; anything else (a deployed site) is a "Live Demo".
 function isVideoDemo(url) {
@@ -105,9 +114,19 @@ function Projects() {
   const { projects } = data
   const [ref, inView] = useInView()
   const [page, setPage] = useState(0)
+  const [filter, setFilter] = useState('all')
   const [selected, setSelected] = useState(null)
-  const totalPages = Math.ceil(projects.length / PER_PAGE)
-  const visible = projects.slice(page * PER_PAGE, (page + 1) * PER_PAGE)
+
+  const filtered = filter === 'all'
+    ? projects
+    : projects.filter(p => p.focus?.includes(filter))
+  const totalPages = Math.ceil(filtered.length / PER_PAGE)
+  const visible = filtered.slice(page * PER_PAGE, (page + 1) * PER_PAGE)
+
+  const applyFilter = (id) => {
+    setFilter(id)
+    setPage(0)
+  }
 
   const closeModal = useCallback(() => setSelected(null), [])
 
@@ -120,6 +139,21 @@ function Projects() {
           <p className="text-slate-500 dark:text-slate-400 mt-5">Things I have built</p>
         </div>
 
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {FILTERS.map(f => (
+            <button key={f.id} onClick={() => applyFilter(f.id)}
+              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all border ${filter === f.id
+                ? 'page-active border-transparent'
+                : 'text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover-accent-border page-inactive'
+              }`}>
+              {f.label}
+            </button>
+          ))}
+        </div>
+
+        {visible.length === 0 ? (
+          <p className="text-center text-slate-400 dark:text-slate-500 py-16">No projects in this category yet.</p>
+        ) : (
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 stagger ${inView ? 'in' : ''}`}>
           {visible.map((proj, i) => (
             <div key={i} onClick={() => setSelected(proj)} className="group card-hover bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700/50 overflow-hidden cursor-pointer">
@@ -179,6 +213,7 @@ function Projects() {
             </div>
           ))}
         </div>
+        )}
 
         {totalPages > 1 && (
           <div className="flex items-center justify-center gap-2 mt-10">

@@ -1,29 +1,111 @@
 {
   "name": "Amera Mohammed",
-  "title": "Software Engineer",
-  "titles": ["Software Engineer", "Frontend Engineer", "Backend Engineer"],
+  "title": "FullStack Software Engineer",
+  "titles": [
+    "FullStack Software Engineer",
+    "Frontend Engineer",
+    "Backend Engineer"
+  ],
   "cv": "/Amera_Mohammed_Software_Engineer.pdf",
   "contact": {
     "phone": "+20 102 168 5965",
     "email": "ameraelsa3id@gmail.com",
-    "location": "Mansoura, Egypt",
+    "location": "Cairo, Egypt",
     "relocation": "Open to Relocation / Remote",
     "linkedin": "https://www.linkedin.com/in/amera-mohammed/",
     "github": "https://github.com/AmiraElsa3id"
   },
-  "summary": "Frontend Engineer with a BSc in Computer Science and hands-on expertise building fast, accessible, and scalable user interfaces. Proficient in React, Next.js, TypeScript, Tailwind CSS, and modern JavaScript (ES6+), with strong experience in responsive design, component architecture, performance optimisation, and Web Vitals improvement. Mentored 20+ developers on advanced React patterns and delivered 30+ workshops on modern frontend practices. Experienced with REST API integration, Git workflows, Agile environments, and AI-assisted development tools.",
+  "summary": "Full-stack software engineer with a BSc in Computer Science and hands-on experience designing server-side systems, RESTful APIs, and responsive user interfaces. Proficient across the stack: PHP, Laravel, Python, Django, Node.js/Express and DRF on the backend; React, Next.js, Vue.js, Angular and TypeScript on the frontend; MySQL and MongoDB for database design. Highly adaptable with a passion for continuous learning, quickly mastering new technologies, containerization tools, and modern workflows. Mentored 20+ developers and delivered 30+ technical workshops.",
   "skills": {
-    "Languages": ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "PHP", "Python", "SQL", "C++ (Basic)", "Java (Basic)"],
-    "Frameworks & Libraries": ["React", "Next.js", "Vue.js", "Angular (Basic)", "jQuery", "Django", "Flask", "Laravel", "Node.js", "Express", "Inertia.js"],
-    "Styling": ["Tailwind CSS", "Bootstrap", "SASS/SCSS", "CSS Animations", "Responsive Design"],
-    "State Management": ["React Context API", "React Hooks", "Redux", "Zustand"],
-    "APIs & Auth": ["RESTful APIs", "JWT Authentication", "Stripe Payment", "RBAC", "Spatie Laravel Permission"],
-    "Backend": ["Laravel 11", "Django", "Custom PHP MVC", "Postman", "API Design"],
-    "Databases": ["MySQL", "MongoDB", "Eloquent ORM", "PDO", "Query Optimisation"],
-    "Performance": ["Core Web Vitals", "Lighthouse Auditing", "Code Splitting", "Lazy Loading", "Image Optimisation"],
-    "Accessibility": ["WCAG Guidelines", "Semantic HTML", "ARIA Attributes"],
-    "DevOps & Tools": ["Git", "GitHub", "Linux", "Apache", "Nginx", "CI/CD Basics", "Figma", "Agile/Scrum"],
-    "Soft Skills": ["Problem Solving", "Critical Thinking", "Mentorship", "Technical Communication", "Attention to Detail", "Collaboration", "Adaptability"]
+    "Languages": [
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "PHP",
+      "Python",
+      "SQL",
+      "C++ (Basic)",
+      "Java (Basic)"
+    ],
+    "Frameworks & Libraries": [
+      "React",
+      "Next.js",
+      "Vue.js",
+      "Angular (Basic)",
+      "jQuery",
+      "Django",
+      "Flask",
+      "Laravel",
+      "Node.js",
+      "Express",
+      "Inertia.js"
+    ],
+    "Styling": [
+      "Tailwind CSS",
+      "Bootstrap",
+      "SASS/SCSS",
+      "CSS Animations",
+      "Responsive Design"
+    ],
+    "State Management": [
+      "React Context API",
+      "React Hooks",
+      "Redux",
+      "Zustand"
+    ],
+    "APIs & Auth": [
+      "RESTful APIs",
+      "JWT Authentication",
+      "Stripe Payment",
+      "RBAC",
+      "Spatie Laravel Permission"
+    ],
+    "Backend": [
+      "Laravel",
+      "Django",
+      "Custom PHP MVC",
+      "Postman",
+      "API Design"
+    ],
+    "Databases": [
+      "MySQL",
+      "MongoDB",
+      "Eloquent ORM",
+      "PDO",
+      "Query Optimisation"
+    ],
+    "Performance": [
+      "Core Web Vitals",
+      "Lighthouse Auditing",
+      "Code Splitting",
+      "Lazy Loading",
+      "Image Optimisation"
+    ],
+    "Accessibility": [
+      "WCAG Guidelines",
+      "Semantic HTML",
+      "ARIA Attributes"
+    ],
+    "DevOps & Tools": [
+      "Git",
+      "GitHub",
+      "Linux",
+      "Apache",
+      "Nginx",
+      "CI/CD Basics",
+      "Figma",
+      "Agile/Scrum"
+    ],
+    "Soft Skills": [
+      "Problem Solving",
+      "Critical Thinking",
+      "Mentorship",
+      "Technical Communication",
+      "Attention to Detail",
+      "Collaboration",
+      "Adaptability"
+    ]
   },
   "experience": [
     {
@@ -51,6 +133,20 @@
   ],
   "projects": [
     {
+      "name": "RestoMind — AI-Powered Restaurant Management",
+      "tech": "Next.js, NestJS, Python FastAPI, MongoDB",
+      "description": "Smart restaurant management platform featuring a Next.js frontend, NestJS/MongoDB backend, and a Python FastAPI AI forecasting model. Implemented reservation workflows, role-based access control, and Stripe payment processing.",
+      "links": {
+        "code": "https://github.com/AmiraElsa3id/prediction-model",
+        "demo": "https://github.com/AhmedMohO/restomind-app"
+      },
+      "image": "/assets/images/restomind.png",
+      "focus": [
+        "full-stack",
+        "ai-ml"
+      ]
+    },
+    {
       "name": "FreshCart — Next.js E-Commerce",
       "tech": "Next.js, TypeScript, Tailwind CSS, REST API, Stripe",
       "description": "Full-storefront e-commerce build on the Next.js App Router — category and brand browsing, a large product catalogue, cart and wishlist, authentication, and a responsive checkout flow.",
@@ -59,7 +155,10 @@
         "demo": "https://freshcart-route.vercel.app/"
       },
       "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
-      "image": "/assets/images/freshcart-next.png"
+      "image": "/assets/images/freshcart-next.png",
+      "focus": [
+        "frontend"
+      ]
     },
     {
       "name": "Cosmos — Space Dashboard",
@@ -70,7 +169,10 @@
         "demo": "https://cosmos-space-dashboard-route.vercel.app/"
       },
       "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
-      "image": "/assets/images/cosmos-space.png"
+      "image": "/assets/images/cosmos-space.png",
+      "focus": [
+        "frontend"
+      ]
     },
     {
       "name": "Wanderlust — Travel Planner",
@@ -81,7 +183,10 @@
         "demo": "https://city-specs-route.vercel.app/"
       },
       "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
-      "image": "/assets/images/city-specs.png"
+      "image": "/assets/images/city-specs.png",
+      "focus": [
+        "frontend"
+      ]
     },
     {
       "name": "QuizMaster — Quiz Game",
@@ -92,7 +197,10 @@
         "demo": "https://quiz-master-route.vercel.app/"
       },
       "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
-      "image": "/assets/images/quiz-master.png"
+      "image": "/assets/images/quiz-master.png",
+      "focus": [
+        "frontend"
+      ]
     },
     {
       "name": "Mudabbir — Personal Finance Dashboard",
@@ -103,7 +211,10 @@
         "demo": "https://mudabbir.vercel.app/"
       },
       "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
-      "image": "/assets/images/mudabbir.png"
+      "image": "/assets/images/mudabbir.png",
+      "focus": [
+        "frontend"
+      ]
     },
     {
       "name": "The UX Review — Brutalist Blog",
@@ -114,7 +225,10 @@
         "demo": "https://the-ux-review-blog.vercel.app/"
       },
       "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
-      "image": "/assets/images/ux-review.png"
+      "image": "/assets/images/ux-review.png",
+      "focus": [
+        "frontend"
+      ]
     },
     {
       "name": "Arabic Developer Portfolio",
@@ -125,7 +239,10 @@
         "demo": "https://portfolio-route.vercel.app/"
       },
       "context": "Built live in front of students during Route Academy's weekly mentoring sessions.",
-      "image": "/assets/images/portfolio-route.png"
+      "image": "/assets/images/portfolio-route.png",
+      "focus": [
+        "frontend"
+      ]
     },
     {
       "name": "Node Posts — RESTful API with Payments",
@@ -135,7 +252,10 @@
         "code": "https://github.com/AmiraElsa3id/Node-Posts",
         "demo": null
       },
-      "image": "/assets/images/node-posts-docs.png"
+      "image": "/assets/images/node-posts-docs.png",
+      "focus": [
+        "backend"
+      ]
     },
     {
       "name": "WhatsApp Clone — Real-Time Chat App",
@@ -145,7 +265,10 @@
         "code": "https://github.com/AmiraElsa3id/whatsapp-clone",
         "demo": null
       },
-      "image": "/assets/images/whatsapp-clone.png"
+      "image": "/assets/images/whatsapp-clone.png",
+      "focus": [
+        "full-stack"
+      ]
     },
     {
       "name": "Smart Notes Workspace — Full-Stack Notes App",
@@ -155,7 +278,10 @@
         "code": "https://github.com/AmiraElsa3id/smart-notes-workspace",
         "demo": null
       },
-      "image": "/assets/images/smart-note.png"
+      "image": "/assets/images/smart-note.png",
+      "focus": [
+        "full-stack"
+      ]
     },
     {
       "name": "Clinic Appointment System",
@@ -165,7 +291,10 @@
         "code": "https://github.com/AmiraElsa3id/Clinic-Appointment-System",
         "demo": null
       },
-      "image": "/assets/images/clinic.png"
+      "image": "/assets/images/clinic.png",
+      "focus": [
+        "full-stack"
+      ]
     },
     {
       "name": "Hotel Management System",
@@ -175,7 +304,10 @@
         "code": "https://github.com/AhmedMohO/hotel-system",
         "demo": "https://www.linkedin.com/feed/update/urn:li:activity:7449488338350133248/"
       },
-      "image": "/assets/images/Hotel.png"
+      "image": "/assets/images/Hotel.png",
+      "focus": [
+        "full-stack"
+      ]
     },
     {
       "name": "Cafeteria Management System",
@@ -185,7 +317,10 @@
         "code": "https://github.com/AhmedMohO/cafeteria-project",
         "demo": "https://www.linkedin.com/posts/amera-mohammed_php-webdevelopment-mvc-ugcPost-7440020393433907202-Ore-/"
       },
-      "image": "/assets/images/Cafe.png"
+      "image": "/assets/images/Cafe.png",
+      "focus": [
+        "full-stack"
+      ]
     },
     {
       "name": "BlogHub — Full-Stack Blog Platform",
@@ -195,7 +330,10 @@
         "code": "https://github.com/AmiraElsa3id/ITI-Blog",
         "demo": null
       },
-      "image": "/assets/images/iti-blog.png"
+      "image": "/assets/images/iti-blog.png",
+      "focus": [
+        "full-stack"
+      ]
     },
     {
       "name": "Linked Posts — Social Media Application",
@@ -205,7 +343,10 @@
         "code": "https://github.com/AmiraElsa3id/Linked-Posts",
         "demo": "https://linked-posts-alpha.vercel.app/"
       },
-      "image": "/assets/images/linked-posts.png"
+      "image": "/assets/images/linked-posts.png",
+      "focus": [
+        "frontend"
+      ]
     },
     {
       "name": "Fresh Cart — E-Commerce SPA",
@@ -215,7 +356,10 @@
         "code": "https://github.com/AmiraElsa3id/Fresh-Cart",
         "demo": "https://fresh-cart-ecommerce-site.vercel.app"
       },
-      "image": "/assets/images/fresh-cart.png"
+      "image": "/assets/images/fresh-cart.png",
+      "focus": [
+        "frontend"
+      ]
     },
     {
       "name": "AI Chat Clone",
@@ -225,25 +369,38 @@
         "code": "https://github.com/AmiraElsa3id/Ai-Chat-Clone",
         "demo": "https://www.linkedin.com/posts/amera-mohammed_built-an-ai-chat-clone-part-of-my-vibe-ugcPost-7467582877506113537-QdiQ/"
       },
-      "image": "/assets/images/ai-chat-clone.png"
+      "image": "/assets/images/ai-chat-clone.png",
+      "focus": [
+        "full-stack",
+        "ai-ml"
+      ]
     },
     {
       "name": "D-Pathy — AI-Powered Diabetic Retinopathy Detection",
       "tech": "Python, TensorFlow, Flutter",
-      "description": "Graduation project — AI-powered mobile application for diabetic retinopathy detection. Awarded Excellent grade.",
+      "description": "Graduation project — AI-powered mobile app for diabetic retinopathy detection, awarded an Excellent grade. Built the Flask API service that serves the TensorFlow model to the Flutter app.",
       "links": {
         "code": "https://github.com/nadareda12001/D-pthy",
-        "demo": "https://youtu.be/3Zspp3XEy4o"
+        "demo": "https://youtu.be/3Zspp3XEy4o",
+        "api": "https://github.com/AmiraElsa3id/flask-app"
       },
-      "image": "/assets/images/d-pathy.png"
+      "image": "/assets/images/d-pathy.png",
+      "focus": [
+        "ai-ml",
+        "backend"
+      ]
     }
   ],
   "education": [
     {
-      "degree": "ITI Diploma — Open Source Track (9 Months)",
+      "degree": "ITI Diploma — Open Source Track (9-Month Scholarship)",
       "school": "Information Technology Institute (ITI), Mansoura",
-      "period": "2025 — Present",
-      "details": ["Covered PHP, Laravel, Python, Django, MySQL, Linux, Nginx, Apache, DevOps fundamentals, and agile practices."]
+      "period": "2025 — 2026",
+      "details": [
+        "Ranked 1st on track — intensive software engineering program covering full-stack multi-language development, system architecture, database design, and debugging workflows.",
+        "Covered PHP/Laravel, Python/Django, MySQL, Linux administration, Apache/Nginx, DevOps fundamentals, and AI integration.",
+        "Graduation Project: RestoMind — smart restaurant management platform with a Next.js frontend, NestJS/MongoDB backend, and a Python FastAPI AI forecasting model. Model: https://github.com/AmiraElsa3id/prediction-model"
+      ]
     },
     {
       "degree": "Master of Science in Computer Science",
@@ -255,7 +412,9 @@
       "degree": "Frontend Development Diploma",
       "school": "Route Academy",
       "period": "2023 — 2024",
-      "details": ["Intensive programme covering React, Next.js, TypeScript, Tailwind CSS, and modern JavaScript (ES6+) patterns."]
+      "details": [
+        "Intensive programme covering React, Next.js, TypeScript, Tailwind CSS, and modern JavaScript (ES6+) patterns."
+      ]
     },
     {
       "degree": "Bachelor of Science in Computer Science",
