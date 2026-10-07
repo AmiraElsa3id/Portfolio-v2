@@ -5,11 +5,12 @@ import {
   SiGit, SiGithub, SiLinux, SiNginx, SiApache, SiFigma,
   SiStripe, SiPostman,
   SiVite, SiReactrouter, SiReactquery, SiAxios, SiChartdotjs, SiFramer,
+  SiAngular, SiFlask, SiCplusplus, SiNodedotjs, SiExpress,
 } from 'react-icons/si'
-import { FaSass } from 'react-icons/fa'
+import { FaSass, FaJava } from 'react-icons/fa'
 import {
   TbBrandRedux, TbApi, TbAccessible, TbComponents, TbSql,
-  TbChartBar, TbServer, TbCode, TbUsers, TbMessage, TbLock,
+  TbChartBar, TbServer, TbCode, TbUsers, TbMessage, TbLock, TbBox,
 } from 'react-icons/tb'
 
 const iconMap = {
@@ -21,13 +22,23 @@ const iconMap = {
   php: SiPhp,
   python: SiPython,
   sql: TbSql,
+  'c++': SiCplusplus,
+  'c++ (basic)': SiCplusplus,
+  java: FaJava,
+  'java (basic)': FaJava,
 
   // Frameworks & Libraries
   react: SiReact,
   'next.js': SiNextdotjs,
   'vue.js': SiVuedotjs,
+  angular: SiAngular,
+  'angular (basic)': SiAngular,
   jquery: SiJquery,
+  django: SiDjango,
+  flask: SiFlask,
   laravel: SiLaravel,
+  'node.js': SiNodedotjs,
+  express: SiExpress,
   vite: SiVite,
   'react router': SiReactrouter,
 
@@ -42,6 +53,7 @@ const iconMap = {
   'react context api': TbBrandRedux,
   'react hooks': SiReact,
   redux: TbBrandRedux,
+  zustand: TbBox,
 
   // Data & Libraries
   'tanstack query': SiReactquery,
@@ -62,7 +74,6 @@ const iconMap = {
 
   // Backend
   'laravel 11': SiLaravel,
-  django: SiDjango,
   'custom php mvc': SiPhp,
   postman: SiPostman,
   'api design': TbApi,

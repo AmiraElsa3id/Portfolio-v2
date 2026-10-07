@@ -13,10 +13,10 @@
   },
   "summary": "Frontend Engineer with a BSc in Computer Science and hands-on expertise building fast, accessible, and scalable user interfaces. Proficient in React, Next.js, TypeScript, Tailwind CSS, and modern JavaScript (ES6+), with strong experience in responsive design, component architecture, performance optimisation, and Web Vitals improvement. Mentored 20+ developers on advanced React patterns and delivered 30+ workshops on modern frontend practices. Experienced with REST API integration, Git workflows, Agile environments, and AI-assisted development tools.",
   "skills": {
-    "Languages": ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "PHP", "Python", "SQL"],
-    "Frameworks & Libraries": ["React", "Next.js", "Vue.js", "jQuery", "Django", "Laravel", "Inertia.js"],
+    "Languages": ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "PHP", "Python", "SQL", "C++ (Basic)", "Java (Basic)"],
+    "Frameworks & Libraries": ["React", "Next.js", "Vue.js", "Angular (Basic)", "jQuery", "Django", "Flask", "Laravel", "Node.js", "Express", "Inertia.js"],
     "Styling": ["Tailwind CSS", "Bootstrap", "SASS/SCSS", "CSS Animations", "Responsive Design"],
-    "State Management": ["React Context API", "React Hooks", "Redux"],
+    "State Management": ["React Context API", "React Hooks", "Redux", "Zustand"],
     "APIs & Auth": ["RESTful APIs", "JWT Authentication", "Stripe Payment", "RBAC", "Spatie Laravel Permission"],
     "Backend": ["Laravel 11", "Django", "Custom PHP MVC", "Postman", "API Design"],
     "Databases": ["MySQL", "MongoDB", "Eloquent ORM", "PDO", "Query Optimisation"],
