@@ -43,6 +43,7 @@ from a single JSON file, so content updates never require touching a component.
 | | |
 |---|---|
 | **Data-driven** | All content lives in `src/data/portfolio.json` — edit the JSON, not the components |
+| **Version switcher** | Nav-bar pill that jumps between portfolio versions, flagging archived ones |
 | **Route-level code splitting** | Every section below the hero is `React.lazy` loaded behind a `Suspense` skeleton |
 | **Filterable project grid** | Filter by `frontend` / `backend` / `full-stack` / `ai-ml` with pagination that respects the active filter |
 | **Project modal** | Click any card for a detail view, tech badges and per-part repository links |
@@ -202,6 +203,16 @@ npm run preview  # serve the production build locally
   "cv": "/Amera_Mohammed_Software_Engineer.pdf",
   "contact": { "email": "…", "github": "…", "linkedin": "…" },
 
+  // nav-bar version switcher
+  "versions": {
+    "current": "v2",                          // rendered as a non-clickable highlight
+    "list": [
+      { "id": "v1", "note": "Archived" },      // no url → inert row, goes nowhere
+      { "id": "v2" },
+      { "id": "v3", "url": "…" }
+    ]
+  },
+
   "projects": [
     {
       "name": "…",
@@ -224,6 +235,15 @@ npm run preview  # serve the production build locally
 
 The `focus` values map to the filter tabs in `Projects.jsx` — `frontend`,
 `backend`, `full-stack` and `ai-ml`.
+
+**Version switcher** — the pill next to the logo in the nav bar opens a dropdown
+listing every entry in `versions.list`. An entry is only navigable if it declares
+a `url`; the one matching `versions.current` is highlighted with a checkmark and
+is never a link. Navigation happens in the same tab, so the browser Back button
+returns you here. An optional `note` renders as a small tag, which is how `v1` is
+marked **Archived** — it has no `url`, so it is inert rather than a dead link.
+To ship a v4, append it to `list` with its `url` and bump `current` — no component
+changes needed.
 
 **Adding an icon** — register it in the `iconMap` in `src/data/skillIcons.js` so
 new tech names get a proper glyph. Keys are lower-cased by `getSkillIcon`, so

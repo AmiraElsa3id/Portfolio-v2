@@ -7,6 +7,22 @@
     "Backend Engineer"
   ],
   "cv": "/Amera_Mohammed_Software_Engineer.pdf",
+  "versions": {
+    "current": "v2",
+    "list": [
+      {
+        "id": "v1",
+        "note": "Archived"
+      },
+      {
+        "id": "v2"
+      },
+      {
+        "id": "v3",
+        "url": "https://amera-mohammed-portfolio-v3.vercel.app"
+      }
+    ]
+  },
   "contact": {
     "phone": "+20 102 168 5965",
     "email": "ameraelsa3id@gmail.com",
