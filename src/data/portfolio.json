@@ -279,7 +279,7 @@
       "description": "Full-stack note-taking application with JWT authentication, full CRUD notes with categories, tags, pinning, and archiving. Supports markdown rendering, debounced full-text search across title, content, and tags, pagination, avatar uploads, and persistent dark/light theme. Monorepo structure with separate backend and frontend, Swagger API documentation, deployable to Vercel and MongoDB Atlas.",
       "links": {
         "code": "https://github.com/AmiraElsa3id/smart-notes-workspace",
-        "demo": null
+        "demo": "https://drive.google.com/file/d/1oDVvvpkFYGTyySpinmodgiIdkLMcUvUS/view?usp=sharing"
       },
       "image": "/assets/images/smart-note.png",
       "focus": [

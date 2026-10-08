@@ -14,10 +14,11 @@ const FILTERS = [
   { id: 'ai-ml', label: 'AI / ML' },
 ]
 
-// A demo pointing at a LinkedIn post or a YouTube video is presented as a
-// "Video Demo"; anything else (a deployed site) is a "Live Demo".
+// A demo pointing at a LinkedIn post, a YouTube video or a Google Drive video
+// file is presented as a "Video Demo"; anything else (a deployed site) is a
+// "Live Demo".
 function isVideoDemo(url) {
-  return /(?:linkedin\.com|youtube\.com|youtu\.be)/i.test(url)
+  return /(?:linkedin\.com|youtube\.com|youtu\.be|drive\.google\.com)/i.test(url)
 }
 
 function ProjectImage({ src, alt }) {
