@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "screenshots": "node scripts/take-screenshots.mjs",
+    "screenshots:readme": "node scripts/take-readme-screenshots.mjs",
     "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {

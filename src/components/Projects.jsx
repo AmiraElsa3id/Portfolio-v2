@@ -210,7 +210,7 @@ function Projects() {
                 </div>
                 <h3 className="text-base font-semibold text-slate-900 dark:text-white mb-1 group-hover-accent-text transition-colors">{proj.name}</h3>
                 <div className="flex gap-1.5 mb-3">
-                  {proj.focus && proj.focus.map((f, idx) => (
+                  {proj.focus.map(f => (
                     <span key={f} className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded text-[0.65em] font-medium border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:bg-accent-hover border-transparent hover:text-white transition-all">
                       {f}
                     </span>
